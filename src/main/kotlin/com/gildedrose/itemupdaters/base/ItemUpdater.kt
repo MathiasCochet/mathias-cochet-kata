@@ -10,6 +10,9 @@ abstract class BaseItemUpdater: ItemUpdater {
 
     internal companion object {
         private const val SELLIN_UPDATE_INTERVAL = -1
+
+        const val MINIMUM_QUALITY_VALUE = 0
+        const val MAXIMUM_QUALITY_VALUE = 50
     }
 
     override fun updateItem(item: Item) {
