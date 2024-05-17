@@ -7,5 +7,10 @@ class DwindlingItemUpdater : BaseItemUpdater() {
 
     override fun updateItem(item: Item) {
         super.updateItem(item)
+
+        item.apply {
+            quality = maxOf(quality - 2, MINIMUM_QUALITY_VALUE)
+        }
+
     }
 }
