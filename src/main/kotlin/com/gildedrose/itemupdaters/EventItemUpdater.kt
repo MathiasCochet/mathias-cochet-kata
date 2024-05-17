@@ -26,7 +26,7 @@ class EventItemUpdater : BaseItemUpdater() {
     }
 
     private fun getIncrementValue(sellin: Int): Int? {
-        if (sellin < 0) return null;
+        if (sellin < SELLIN_EXPIRY) return null;
 
         return when (sellin) {
             in eventVeryNearRange -> EVENT_VERY_NEAR_INCREMENT

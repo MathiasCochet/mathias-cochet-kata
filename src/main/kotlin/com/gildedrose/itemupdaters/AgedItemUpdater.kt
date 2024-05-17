@@ -22,6 +22,6 @@ class AgedItemUpdater : BaseItemUpdater() {
     }
 
     private fun getIncrementValue(sellin: Int): Int {
-        return if (sellin >= 0) NORMAL_INCREMENT else EXPIRED_INCREMENT
+        return if (sellin >= SELLIN_EXPIRY) NORMAL_INCREMENT else EXPIRED_INCREMENT
     }
 }
