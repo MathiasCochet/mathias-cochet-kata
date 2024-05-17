@@ -11,4 +11,4 @@ import sys
 
 args = " ".join(sys.argv[1:])
 TEXTTEST_HOME = os.environ.get("TEXTTEST_HOME", os.getcwd())
-subprocess.run(f"{TEXTTEST_HOME}/Kotlin/gradlew -p {TEXTTEST_HOME}/Kotlin -q run --args {args}", shell=True)
+subprocess.run(f"{TEXTTEST_HOME}/Mathias-Cochet-kata/gradlew -p {TEXTTEST_HOME}/Mathias-Cochet-kata -q run --args {args}", shell=True)
