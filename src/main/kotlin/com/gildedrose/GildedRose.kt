@@ -2,6 +2,7 @@ package com.gildedrose
 
 import com.gildedrose.itemupdaters.AgedItemUpdater
 import com.gildedrose.itemupdaters.DefaultItemUpdater
+import com.gildedrose.itemupdaters.DwindlingItemUpdater
 import com.gildedrose.itemupdaters.base.ItemUpdater
 import com.gildedrose.itemupdaters.base.getItemUpdater
 
@@ -12,7 +13,10 @@ class GildedRose(private var items: List<Item>) {
             val item = items[i]
             val itemUpdater: ItemUpdater = item.getItemUpdater()
 
-            if (itemUpdater is DefaultItemUpdater || itemUpdater is AgedItemUpdater) {
+            if (itemUpdater is DefaultItemUpdater
+                || itemUpdater is AgedItemUpdater
+                || itemUpdater is DwindlingItemUpdater
+            ) {
                 itemUpdater.updateItem(item)
             } else {
                 //Legacy code
