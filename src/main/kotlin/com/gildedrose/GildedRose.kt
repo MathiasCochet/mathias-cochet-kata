@@ -3,6 +3,7 @@ package com.gildedrose
 import com.gildedrose.itemupdaters.AgedItemUpdater
 import com.gildedrose.itemupdaters.DefaultItemUpdater
 import com.gildedrose.itemupdaters.DwindlingItemUpdater
+import com.gildedrose.itemupdaters.EventItemUpdater
 import com.gildedrose.itemupdaters.base.ItemUpdater
 import com.gildedrose.itemupdaters.base.getItemUpdater
 
@@ -16,6 +17,7 @@ class GildedRose(private var items: List<Item>) {
             if (itemUpdater is DefaultItemUpdater
                 || itemUpdater is AgedItemUpdater
                 || itemUpdater is DwindlingItemUpdater
+                || itemUpdater is EventItemUpdater
             ) {
                 itemUpdater.updateItem(item)
             } else {
