@@ -6,6 +6,6 @@ import com.gildedrose.itemupdaters.base.BaseItemUpdater
 class ImmutableItemUpdater : BaseItemUpdater() {
 
     override fun updateItem(item: Item) {
-        super.updateItem(item)
+        //Do nothing
     }
 }
