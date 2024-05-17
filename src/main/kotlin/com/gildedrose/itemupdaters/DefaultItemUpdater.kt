@@ -22,6 +22,6 @@ class DefaultItemUpdater : BaseItemUpdater() {
     }
 
     private fun getDecrementValue(sellin: Int): Int {
-        return if (sellin >= 0) NORMAL_DECREMENT else EXPIRED_DECREMENT
+        return if (sellin >= SELLIN_EXPIRY) NORMAL_DECREMENT else EXPIRED_DECREMENT
     }
 }
