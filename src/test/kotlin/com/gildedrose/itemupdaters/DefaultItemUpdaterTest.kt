@@ -13,7 +13,7 @@ class DefaultItemUpdaterTest {
     private val defaultItem = Item(defaultItemName, 10, 10)
 
     @BeforeEach
-    fun setup() {
+    fun setUp() {
         defaultItemUpdater = DefaultItemUpdater()
     }
 
